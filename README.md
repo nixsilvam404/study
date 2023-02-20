@@ -1,1 +1,1 @@
-Hello, study?
+Hello, fellow kids
