@@ -9,8 +9,8 @@ def calculations():
 
 def calculations_2():
     x = float(input('Insert a float number with 2 digits after point: '))
-    print(int(round(100*(x % 1))))
-    print(int(x*10) % 10)
+    print(f'Fraction: {int(round(100*(x % 1)))}')
+    print(f'First digit after decimal point: {(int(x*10) % 10)}')
 
 
-calculations_2()
+# calculations_2()
