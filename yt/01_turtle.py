@@ -10,7 +10,7 @@ tt.setheading(0)
 
 def draw_shape(length: int, shapes_number: int):
     angle = 360 / shapes_number
-    for i in range(0, shapes_number):
+    for i in range(shapes_number):
         tt.forward(length)
         tt.left(angle)
 
@@ -26,9 +26,9 @@ def draw_shape(length: int, shapes_number: int):
 
 # TEN_SQUARES:
 def ten_squares(length: int):
-    for i in range(0, 10):
+    for i in range(10):
         draw_shape(length, 4)
-        length = length + 10
+        length += 10
         tt.penup()
         tt.backward(5)
         tt.right(90)
@@ -43,7 +43,7 @@ def ten_squares(length: int):
 
 def spider(n: int):
     angle = 360 / n
-    for i in range(0, n):
+    for i in range(n):
         tt.right(angle)
         tt.forward(100)
         tt.stamp()
@@ -76,7 +76,7 @@ def spiral_square(size: int):
 # REGULAR POLYGONS:
 
 def regular_polygons(shapes: int):
-    for i in range(1, 10):
+    for i in range(10):
         tt.speed(1)
         size = shapes * 10
         draw_shape(size, shapes)
@@ -86,7 +86,7 @@ def regular_polygons(shapes: int):
         tt.forward(size / 2)
         tt.left((360 / shapes) / 2)
         tt.pendown()
-        shapes = shapes + 1
+        shapes += 1
 
 # regular_polygons(3)
 
@@ -96,7 +96,7 @@ def regular_polygons(shapes: int):
 def flower(radius: int, petals: int):
     # tt.speed(0.1)
     angle = 360 / petals
-    for i in range(0, petals):
+    for i in range(petals):
         tt.circle(radius)
         tt.penup()
         tt.right(angle)
@@ -111,7 +111,7 @@ def butterfly(radius: int, wings: int):
     tt.penup()
     tt.right(90)
     tt.pendown()
-    for i in range(0, wings):
+    for i in range(wings):
         tt.circle(radius)
         tt.penup()
         tt.right(180)
@@ -120,7 +120,7 @@ def butterfly(radius: int, wings: int):
         tt.penup()
         tt.right(180)
         tt.pendown()
-        radius = radius + (radius / 2)
+        radius += radius / 2
 
 
 # butterfly(10, 5)
@@ -129,7 +129,7 @@ def arch(radius, arches):
     tt.penup()
     tt.left(90)
     tt.pendown()
-    for i in range(0, arches):
+    for i in range(arches):
         tt.circle(radius * -1, 180)
         tt.circle((radius / 5) * -1, 180)
 
@@ -185,9 +185,9 @@ def smile(size):
 
 def stars(tops: int, size: int):
     if tops % 2 == 0:
-        tops = tops + 1
+        tops += 1
     angle = 180 / tops
-    for i in range(0, tops):
+    for i in range(tops):
         tt.forward(size)
         tt.right(180 - angle)
 
