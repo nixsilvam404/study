@@ -6,6 +6,8 @@ from pyrob.api import *
 @task
 def task_5_3():
     
+    while wall_is_beneath() is False:
+        move_right()
     while wall_is_beneath():
         move_right()
 
