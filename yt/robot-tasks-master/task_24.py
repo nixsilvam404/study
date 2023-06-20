@@ -24,6 +24,5 @@ def task_2_1():
     christ()
 
 
-
 if __name__ == '__main__':
     run_tasks()
