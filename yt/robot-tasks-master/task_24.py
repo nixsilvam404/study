@@ -3,9 +3,26 @@
 from pyrob.api import *
 
 
+def christ():
+    fill_cell()
+    move_down()
+    fill_cell()
+    move_down()
+    fill_cell()
+    move_right()
+    move_up()
+    fill_cell()
+    move_left(2)
+    fill_cell()
+    move_up()
+
+
 @task
 def task_2_1():
-    pass
+    move_down()
+    move_right(2)
+    christ()
+
 
 
 if __name__ == '__main__':
